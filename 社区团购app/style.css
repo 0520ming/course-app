@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --main-color: #27ae60;
+    --main-light: #bee7cf;
+    --accent-light: #f4e3b3;
+    --body-color: #efefef;
+    --dark-color: #393939;
+    --light-color: #fbf3fd;
+}
+body{
+    background: var(--light-color);
+}
+a{
+    color: var(--dark-color);
+}
+    
+
+
+/* 导航栏 */
+header{
+    background: var(--main-color);
+    padding: 2rem 1.5rem 5rem;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+header nav p{
+    font-weight: 500;
+    color: var(--light-color);
+}
+header .search{
+    margin: 1.3rem 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--body-color);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+}
+header .search span{
+    font-size: 1rem;
+    margin-right: 0.6rem;
+}
+header .search input{
+    display: block;
+    flex: 1;
+    background: transparent; 
+    border: none;
+    outline: none;
+}
+
+
+/* 中心内容*/
+.main{
+    padding: 1rem;
+    padding-bottom: 4rem;
+    border-radius: 35px 35px 0 0;
+    background: var(--body-color);
+    position: relative;
+    top: -35px;
+}
+
+/* 分类 */
+.main .section-wrapper{
+    background-color: #fff;
+    box-shadow: 3px 3px 30px ragb(0,0,0,0.1);
+    border-radius: 30px;
+    padding: 1rem;
+}
+.main .section-wrapper .flex-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+.main .section-wrapper .flex-header h2{
+    font-size: 1.2rem;
+}
+.main .section-wrapper .flex-header a{
+    font-size: 1.1rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.main .section-wrapper .items{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    overflow-x: auto;
+}
+
+/* 自定义滚动条（隐藏） */
+.main .section-wrapper .items::-webkit-scrollbar{
+    width: 0;
+}
+.main .section-wrapper .items::-webkit-scrollbar-track{
+    width: 0;
+}
+.main .section-wrapper .items .item{
+    min-width: 100px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+}
+
+.main .section-wrapper .items .item  img{
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    
+}
+.main .section-wrapper .items .item h4{
+    font-size: 0.95rem;
+    padding-top: 1rem;
+}
+
+
+
+/* 限时优惠 */
+.promo{
+    margin: 1.4rem 0rem 0.5rem;
+    margin-bottom: 1rem;
+}
+/* 自定义滚动条（隐藏） */
+.main .promo-items::-webkit-scrollbar{
+    width: 0;
+}
+.main .promo-items::-webkit-scrollbar-track{
+    width: 0;
+}
+.promo .promo-items{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+.promo .promo-item{
+    border-radius: 20px;
+    display: flex;
+    background-color: #D2E3A2;
+    min-width: 300px;
+    padding: 1.3rem 1rem;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.promo .promo-item img{
+    width: 100px;
+    height: 100px;
+    margin-right: 0.7rem;
+}
+.promo .promo-item:last-child{
+    background-color:#99B8CB;
+}
+
+.promo .promo-item h3{
+    font-style:1.4rem;
+    color: var(--main-color);
+}
+.promo .promo-item p{
+    font-size: 0.85rem;
+    margin: 0.5rem 0rem 0.8rem;
+}
+.promo .promo-item a{
+    color: var(--main-color);
+    font-weight: 600;
+}
+/* .promo .promo-item:last-child h3{
+    color:#619BBE;
+} */
+
+
+/* 热卖单品 */
+
+.main .popular .items .popular-item img{
+    height: 130px;
+    width: 140px;
+    border-radius: 20px;
+    margin-right: 0.7rem;
+}
+
+.main .popular .flex-header{
+    border-bottom: none;
+}
+
+/* 底部栏 */
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+}
+.bottom-nav .bottom-main{
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 30% 30% 0 0;
+}
+
+.bottom-nav .bottom-main .nav-item-main{
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    padding: 0.3rem;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+.bottom-nav .bottom-main .nav-item-main div{
+    border: 7px solid var(--main-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: grid;
+    place-items: center
+}
+.bottom-nav .bottom-main .nav-item-main div span{
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.bottom-nav .bottom-items{
+    display: flex;
+    flex-direction: row;
+}
+.bottom-nav .bottom-items .nav-item{
+    margin-right: 2.3rem;
+    text-align: center;
+} 
+
+.bottom-nav .bottom-items .nav-item:last-child{
+    margin-right: 0;
+}
+
+.bottom-nav .bottom-items .nav-item span{
+    display: block;
+    color: var(--light-color);
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+.bottom-nav .bottom-items .nav-item:active span{
+    color: #256941;
+}
+.bottom-nav .bottom-items .nav-item p{
+    color: var(--light-color);
+    font-size: 0.9rem;
+    font-weight: 600px;
+}
+
+
+
+
+/* fenlei中心内容 */
+
+.category-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-gap:1rem;
+    padding: 1.2rem 0;
+    text-align: center;
+}
+
+.category-items .category-item .item-img{
+    background: var(--light-color);
+}
